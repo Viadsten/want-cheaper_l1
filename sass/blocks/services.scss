@@ -1,0 +1,119 @@
+
+
+.services__item{
+    position: relative;
+    height: 320px;
+    width: 277px;
+    padding: 20px;
+    .services__item--bg{
+        position: absolute;
+        top: 0px;
+    }
+}
+
+.services__h3{
+    z-index: 2;
+    position: relative;
+    color: #fff;
+    margin-left: 30px;
+    margin-top: 57px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+
+.services__list{
+    margin: 44px 0;
+}
+
+.services__arrow-wrp{
+    display: flex;
+    justify-content: center;
+    .arrow-img{
+        margin-left: 80px;
+        margin-right: -25px;
+        width: 85px !important;
+        height: auto !important;
+        position: relative;
+    }
+    .circle-img{
+        position: relative;
+        width: 48px !important;
+        height: 48px !important;
+    }
+}
+
+.services__link{
+    margin-top: 80px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span{
+        margin-bottom: -20px;
+        font-size: 15px;
+    }
+    &:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.services__list{
+    list-style: none;
+}
+
+.services__item{
+    background-image: url('../img/services-1.jpg');
+    background-position: top center;
+    background-size: cover;
+}
+
+@media (min-width:750px){
+    .services__item{
+        transition: all .3s;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        .services__item--bg{
+            position: absolute;
+            top: 0px;
+        }
+    }
+    .services__list{
+        margin-top: 70px;
+        transition: all .3s;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-rows: 270px 270px;
+        grid-template-columns: 24% 24% 24% 24%;
+    }
+    .service__hover-1{
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        width: 100%;
+        height: 100%;
+        .services__item--bg{
+            width: 96%;
+            height: auto;
+        }
+    }
+    .services__h3{
+        margin-left: 0px;
+    }
+    .service__hover-2{
+        grid-column: 2 / 4;
+        grid-row: 1 / 3;
+        width: 100%;
+        height: 100%;
+        .services__item--bg{
+            width: 96%;
+            height: auto;
+        }
+    }
+    
+}
