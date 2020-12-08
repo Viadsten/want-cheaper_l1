@@ -67,7 +67,7 @@
         <main class="page-main">
             <h1 style=display:none;></h1>
             <ul id="services" class="owl-carousel services__list">
-              <li class="services__item service__hover-1" id="service">
+              <li class="services__item service__item--1 service__hover--1 service__active" id="service">
                 <!--<img class="services__item--bg" src="img/services-1.jpg">-->
                 <h3 class="services__h3">Монтаж систем<br>вентиляции</h3>
                 <a href="#" class="services__link">
@@ -78,7 +78,7 @@
                   </div>
                 </a>
               </li>
-              <li class="services__item" id="service">
+              <li class="services__item service__item--2" id="service">
                 <!--<img class="services__item--bg" src="img/services-1.jpg">-->
                 <h3 class="services__h3">Техническое<br>обслуживание</h3>
                 <a href="#" class="services__link">
@@ -89,7 +89,7 @@
                   </div>
                 </a>
               </li>
-              <li class="services__item" id="service">
+              <li class="services__item service__item--3" id="service">
                 <!--<img class="services__item--bg" src="img/services-1.jpg">-->
                 <h3 class="services__h3">Пусконаладочные<br>работы</h3>
                 <a href="#" class="services__link">
@@ -100,7 +100,7 @@
                   </div>
                 </a>
               </li>
-              <li class="services__item" id="service">
+              <li class="services__item service__item--4" id="service">
                 <!--<img class="services__item--bg" src="img/services-1.jpg">-->
                 <h3 class="services__h3">Поставка<br>оборудования</h3>
                 <a href="#" class="services__link">
@@ -111,7 +111,7 @@
                   </div>
                 </a>
               </li>
-              <li class="services__item" id="service">
+              <li class="services__item service__item--5" id="service">
                 <!--<img class="services__item--bg" src="img/services-1.jpg">-->
                 <h3 class="services__h3">Проектирование систем<br>вентиляции</h3>
                 <a href="#" class="services__link">
@@ -130,11 +130,14 @@
                 smartSpeed: 500,
                 slideBy: 3, 
                 responsive:{
+                  400:{
+                      items:1.4
+                  },
                   500:{
                       items:1.6
                   },
                   600:{
-                      items:1.8
+                      items:1.9
                   }
               }
               });
@@ -149,15 +152,15 @@
                 </div>
                 <ul class="advantagest__list">
                   <li class="advantages__item">
-                    <img src="img/3.svg">
+                    <img class="img-3" src="img/3.svg">
                     <p class="advantages__item-text">Года успешной<br>работы на рынке</p>
                   </li>
                   <li class="advantages__item">
-                    <img src="img/150.svg">
+                    <img class="img-150" src="img/150.svg">
                     <p class="advantages__item-text">Оборудованных<br>объектов</p>
                   </li>
                   <li class="advantages__item">
-                    <img src="img/150.svg">
+                    <img class="img-150" src="img/150.svg">
                     <p class="advantages__item-text">Оборудованных<br>объектов</p>
                   </li>
                 </ul>
@@ -167,96 +170,39 @@
 
 
 
-            <!--
-            <h2 class="news__h2">Оставайтесь в курсе событий</h2>
-            <p class="news__title">Основные новости финансовых рынков</p>
+            
+            <h2 class="project__h2">Реализованные проекты</h2>
             <section class="news-wrp">
-              <button id="news-left" class="news__btn btn-prev"><svg width="23" height="32" class="news-btn-svg news_btn--left"><use xlink:href ="#news-btn"></use></svg></button>
               <div class="slider-container">
                 <div class="slider-track">
                   <div class="slider-item">
                     <div class="news__card1">
-                      <img class="news__img" src="img/news1.jpg">
-                      <div class="news__card-content">
-                        <p class="news__card-title">1Премаркет Европы EURUSD, GBPU...</p>
-                        <p class="news__card-description">EURUSDEURUSD пошел по альтернативному сценарию и достиг целевого диапазона.</p>
-                        <span class="news__card-date-btn-wrp">
-                          <p class="news__card-date">14.08.2020</p>
-                          <a class="news__card-btn" href="#">Читать далее</a>
-                        </span>
-                      </div>
+                      <header>
+                        <h5>Проектирование систем вентиляции</h5>
+                        <p>Торговый центр «Авиапарк»</p>
+                      </header>
+                      <h3>Задачи</h3>
+                      <p>Требование заказчика - высокая энергоэффективность при минимальных затратах.
+                        Это один из самых больших хладоцентров России: 6 холодильных машин обеспечивают суммарно 17 МВт холода.</p>
+                      <h3>Используемое оборудование</h3>
+                        <p>Чиллеры Carrier 19XR - водоохлаждаемые холодильные машины с центробежным компрессором, 6 чиллеров производительностью по 3 МВт
+                          Градирни Carrier FXVE
+                          Драйкулеры Carrier FCTE
+                          Фанкойлы 42N - универсальные вентиляторные доводчики
+                          Фанкойлы 42GW - кассетные вентиляторные доводчики
+                          Системы автоматизации (BMS) - ALC</p>
                     </div>
                   </div>
-                  <div class="slider-item">
-                    <div class="news__card1">
-                      <img class="news__img" src="img/news2.jpg">
-                      <div class="news__card-content">
-                        <p class="news__card-title">2Премаркет Европы EURUSD, GBPU...</p>
-                        <p class="news__card-description">EURUSDEURUSD пошел по альтернативному сценарию и достиг целевого диапазона.</p>
-                        <span class="news__card-date-btn-wrp">
-                          <p class="news__card-date">14.08.2020</p>
-                          <a class="news__card-btn" href="#">Читать далее</a>
-                        </span>
-                      </div>
+                  <div class="slider-track">
+                    <div class="slider-item">
+                      
                     </div>
-                  </div>
-                  <div class="slider-item">
-                    <div class="news__card1">
-                      <img class="news__img" src="img/news1.jpg">
-                      <div class="news__card-content">
-                        <p class="news__card-title">3Премаркет Европы EURUSD, GBPU...</p>
-                        <p class="news__card-description">EURUSDEURUSD пошел по альтернативному сценарию и достиг целевого диапазона.</p>
-                        <span class="news__card-date-btn-wrp">
-                          <p class="news__card-date">14.08.2020</p>
-                          <a class="news__card-btn" href="#">Читать далее</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slider-item">
-                    <div class="news__card1">
-                      <img class="news__img" src="img/news2.jpg">
-                      <div class="news__card-content">
-                        <p class="news__card-title">4Премаркет Европы EURUSD, GBPU...</p>
-                        <p class="news__card-description">EURUSDEURUSD пошел по альтернативному сценарию и достиг целевого диапазона.</p>
-                        <span class="news__card-date-btn-wrp">
-                          <p class="news__card-date">14.08.2020</p>
-                          <a class="news__card-btn" href="#">Читать далее</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slider-item">
-                    <div class="news__card1">
-                      <img class="news__img" src="img/news1.jpg">
-                      <div class="news__card-content">
-                        <p class="news__card-title">5Премаркет Европы EURUSD, GBPU...</p>
-                        <p class="news__card-description">EURUSDEURUSD пошел по альтернативному сценарию и достиг целевого диапазона.</p>
-                        <span class="news__card-date-btn-wrp">
-                          <p class="news__card-date">14.08.2020</p>
-                          <a class="news__card-btn" href="#">Читать далее</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="slider-item">
-                    <div class="news__card1">
-                      <img class="news__img" src="img/news2.jpg">
-                      <div class="news__card-content">
-                        <p class="news__card-title">6Премаркет Европы EURUSD, GBPU...</p>
-                        <p class="news__card-description">EURUSDEURUSD пошел по альтернативному сценарию и достиг целевого диапазона.</p>
-                        <span class="news__card-date-btn-wrp">
-                          <p class="news__card-date">14.08.2020</p>
-                          <a class="news__card-btn" href="#">Читать далее</a>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
 
                 </div>
               </div>
+              <button id="news-left" class="news__btn btn-prev"><svg width="23" height="32" class="news-btn-svg news_btn--left"><use xlink:href ="#news-btn"></use></svg></button>
               <button id="news-right" class="news__btn btn-next"><svg width="23" height="32" class="news-btn-svg news_btn--right"><use xlink:href ="#news-btn"></use></svg></button>
-            </section>-->
+            </section>
             <footer class="page-footer">
               
             </footer>

@@ -48,7 +48,7 @@
         background: linear-gradient(127.26deg, rgba(41, 40, 40, 0.84) 43.16%, rgba(37, 37, 37, 0.660156) 49.52%, rgba(34, 34, 34, 0.395833) 60.54%, rgba(30, 30, 30, 0) 72.18%);
     }
     .header__body{
-        max-width: 1280px;
+        max-width: 1160px;
         margin: 0 auto;
         p{
             font-size: 18px;
@@ -58,5 +58,11 @@
     .header__h2{
         font-size: 50px;
         line-height: 45px;
+    }
+}
+
+@media(min-width: 1190px){
+    .header__body{
+        padding: 0;
     }
 }
