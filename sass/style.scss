@@ -96,13 +96,21 @@ button{
   height: 59px;
   line-height: 59px;
   padding-left: 46px;
+  padding-right: 46px;
   outline: none;
   border: none;
   transition: ease-in .2s;
-
+  border-radius: 0;
   &:focus{
 
     box-shadow: inset 0px 4px 20px rgba(138, 137, 137, 0.35);    border: none;
+  }
+}
+
+@media(max-width:600px){
+  .input{
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
