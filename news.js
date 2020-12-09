@@ -68,5 +68,5 @@ $(document).ready(function(){
       position <= -(itemsCount - slidesToShow) * itemWidth
     )
   }
-
+  checkBtns();
 });

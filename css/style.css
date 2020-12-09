@@ -250,6 +250,15 @@
   max-width: 1130px;
   margin: 0 auto; }
 
+.news__btn {
+  transition: .2s; }
+  .news__btn:hover {
+    background-color: rgba(149, 163, 191, 0.9); }
+  .news__btn:active {
+    opacity: 0.6; }
+  .news__btn:disabled {
+    background-color: rgba(216, 216, 216, 0.8); }
+
 .logo-wrp {
   margin-right: 0;
   display: flex;
@@ -375,6 +384,14 @@
   height: 3px;
   width: inherit;
   background: linear-gradient(92.2deg, #95A3BF 25.37%, #5D7CA6 67.28%); }
+
+.nav-tel:hover {
+  text-decoration: none; }
+  .nav-tel:hover div p {
+    color: #3f6aa7; }
+
+.logo-wrp:hover div p {
+  color: #3f6aa7; }
 
 .header__body--wrp {
   width: 100%;
@@ -800,29 +817,106 @@
   width: inherit;
   background: linear-gradient(92.2deg, #95A3BF 25.37%, #5D7CA6 67.28%); }
 
-.modal-header {
-  flex-direction: column-reverse;
-  border: none; }
+/*
+.modal-header{
+    flex-direction: column-reverse;
+    border: none;
+}
 
-.modal-footer {
-  border: none; }
+.modal-footer{
+    border: none;
+}
+
+.modal-content{
+    width: 530px;
+    border-radius: none;
+}
+
+.modal-text, .modal__title{
+    text-align: center !important;
+}
+
+.modal__body{
+    display: flex;
+    padding: 0 30px;
+}
+
+.modal__left{
+    input{
+        margin-bottom: 20px;
+    }
+}
+
+.modal-footer{
+    margin-right: auto; 
+}*/
+.modal-dialog {
+  max-width: 600px; }
 
 .modal-content {
-  width: 530px;
-  border-radius: none; }
+  background-image: url("../img/logo-modal.png");
+  background-repeat: no-repeat;
+  background-size: 169px 169px;
+  background-position: bottom right;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 0;
+  border: none;
+  position: relative; }
+  .modal-content h3 {
+    text-align: center;
+    font-size: 30px; }
+  .modal-content p {
+    text-align: center; }
+  .modal-content .button-modal {
+    width: 100%;
+    margin-top: 40px; }
 
-.modal-text, .modal__title {
-  text-align: center !important; }
+.close-modal {
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  right: 20px;
+  background-color: #fff;
+  border: none;
+  position: absolute;
+  transition: ease-in .2s; }
+  .close-modal:hover {
+    transform: scale(1.2); }
 
-.modal__body {
+.modal__left {
+  margin-top: 40px; }
+  .modal__left input {
+    margin-bottom: 20px;
+    width: 100%; }
+
+.modal__right {
+  margin-top: 20px; }
+
+.modal__time-wrp {
+  width: 200px;
   display: flex;
-  padding: 0 30px; }
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto; }
 
-.modal__left input {
-  margin-bottom: 20px; }
-
-.modal-footer {
-  margin-right: auto; }
+@media (min-width: 600px) {
+  .modal-content {
+    padding: 40px 60px; }
+    .modal-content .button-modal {
+      width: 48%; }
+  .modal__left {
+    width: 48%; }
+  .modal__right {
+    width: 45%; }
+  .modal-centr-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; } }
 
 * {
   margin: 0;
@@ -836,6 +930,7 @@ input[type=checkbox] {
   -webkit-appearance: none; }
 
 button {
+  outline: none;
   -webkit-tap-highlight-color: transparent; }
 
 .button {
@@ -848,7 +943,15 @@ button {
   line-height: 59px;
   align-items: center;
   letter-spacing: -0.02em;
+  transition: ease-in .2s;
   color: #FFFFFF; }
+  .button:hover {
+    border: none;
+    box-shadow: 0px 11px 23px rgba(0, 0, 0, 0.44); }
+  .button:active {
+    transition: ease-in .2s;
+    box-shadow: 0px 11px 23px rgba(0, 0, 0, 0.44), inset 10px 10px 20px #416594;
+    border: none; }
 
 .input {
   background-color: #F3F3F3;
@@ -857,4 +960,8 @@ button {
   line-height: 59px;
   padding-left: 46px;
   outline: none;
-  border: none; }
+  border: none;
+  transition: ease-in .2s; }
+  .input:focus {
+    box-shadow: inset 0px 4px 20px rgba(138, 137, 137, 0.35);
+    border: none; }

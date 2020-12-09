@@ -309,3 +309,16 @@ line-height: 60px;
   max-width: 1130px;
   margin: 0 auto;
 }
+
+.news__btn{
+  transition: .2s;
+  &:hover{
+    background-color: rgba(149, 163, 191, 0.9);
+  }
+  &:active{
+    opacity: 0.6;
+  }
+  &:disabled{
+    background-color: rgba($color: #D8D8D8, $alpha: 0.8);
+  }
+}
