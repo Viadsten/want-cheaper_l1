@@ -286,7 +286,8 @@
   margin-right: 20px; }
 
 .tel-number-wrp {
-  display: none; }
+  display: none;
+  text-align: center; }
 
 .navbar-toggler {
   position: relative;
@@ -392,6 +393,10 @@
 
 .logo-wrp:hover div p {
   color: #3f6aa7; }
+
+@media (min-width: 600px) {
+  .footer__adress-1 {
+    white-space: pre; } }
 
 .header__body--wrp {
   width: 100%;
@@ -918,10 +923,148 @@
     justify-content: space-between;
     align-items: center; } }
 
+.breadcrumb-item + .breadcrumb-item::before.breadcrumb-item + .breadcrumb-item::before {
+  content: '-'; }
+
+.breadcrumb-item + .breadcrumb-item::before {
+  display: inline-block;
+  padding-right: .5rem;
+  color: #6c757d;
+  content: "-"; }
+
+.breadcrumb {
+  background-color: #fff;
+  max-width: 1260px;
+  margin: 0 auto; }
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #5A5A5A; }
+  .breadcrumb-item a:hover {
+    text-decoration: none; }
+
+.map {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1220px; }
+  .map iframe {
+    width: 100%; }
+
+.contact__h2 {
+  padding-left: 5%;
+  margin: 40px 0; }
+
+@media (min-width: 960px) {
+  .contact__h2 {
+    padding-left: 0%; } }
+
+.map--modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 45px 25px;
+  max-width: 330px;
+  height: 315px;
+  background: rgba(43, 42, 42, 0.5);
+  backdrop-filter: blur(10px);
+  margin: 30px auto;
+  position: relative;
+  z-index: 2;
+  color: #fff; }
+  .map--modal p {
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: -0.04em; }
+  .map--modal div img {
+    margin-right: 20px; }
+
+.scores {
+  width: 90%;
+  max-width: 1220px;
+  margin: 30px auto;
+  margin-bottom: 50px; }
+  .scores p {
+    font-size: 25px;
+    line-height: 33px;
+    font-weight: 400;
+    letter-spacing: -0.015em; }
+
+@media (min-width: 900px) {
+  .map iframe {
+    height: 550px; }
+  .map--modal {
+    margin-top: -445px;
+    margin-left: 55%;
+    margin-right: 0;
+    margin-bottom: 180px; } }
+
+@media (min-width: 900px) {
+  .map--modal {
+    margin-left: 57%; } }
+
+.contacts--textarea {
+  margin-top: 15px;
+  min-height: 133px; }
+
+.contacts-call {
+  margin-top: 15px !important; }
+
+.contact-input-wrp {
+  max-width: 630px;
+  margin: 0 auto; }
+
+.call-bg h2 {
+  font-size: 35px;
+  letter-spacing: -0.035em;
+  color: #FFFFFF;
+  line-height: 47px;
+  font-weight: 700; }
+
+.call-bg p {
+  color: #fff; }
+  .call-bg p br {
+    display: none; }
+
+@media (min-width: 560px) {
+  .call-bg p br {
+    display: inline-block; } }
+
+/** Montserrat Light **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/webfonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/webfonts/Montserrat-Light.woff") format("woff"); }
+
+/** Montserrat Medium **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/webfonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/webfonts/Montserrat-Medium.woff") format("woff"); }
+
+/** Montserrat SemiBold **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/webfonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/webfonts/Montserrat-SemiBold.woff") format("woff"); }
+
+/** Montserrat Bold **/
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/webfonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/webfonts/Montserrat-Bold.woff") format("woff"); }
+
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat'; }
+  font-family: "Montserrat" !important; }
+
+body {
+  font-family: "Montserrat" !important; }
 
 input {
   -webkit-tap-highlight-color: transparent; }
@@ -965,3 +1108,22 @@ button {
   .input:focus {
     box-shadow: inset 0px 4px 20px rgba(138, 137, 137, 0.35);
     border: none; }
+
+.hover__link:after {
+  pointer-events: none;
+  opacity: 0;
+  transition: ease opacity 0.3s;
+  transition-delay: .0s; }
+
+.hover__link:hover:after {
+  opacity: 1; }
+
+.hover__link::after {
+  transition: .2s;
+  opacity: 0;
+  margin-bottom: -3px;
+  content: "";
+  display: block;
+  height: 3px;
+  width: inherit;
+  background: linear-gradient(92.2deg, #95A3BF 25.37%, #5D7CA6 67.28%); }
