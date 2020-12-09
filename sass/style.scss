@@ -3,8 +3,9 @@
 @import "blocks/header-body.scss";
 @import "blocks/services.scss";
 @import "blocks/advantages.scss";
-
-
+@import "blocks/call.scss";
+@import "blocks/footer.scss";
+@import "blocks/modal.scss";
 
 *{
   margin: 0;
@@ -36,4 +37,14 @@ button{
   letter-spacing: -0.02em;
 
   color: #FFFFFF;
+}
+
+.input{
+  background-color: #F3F3F3;
+  width: 270px;
+  height: 59px;
+  line-height: 59px;
+  padding-left: 46px;
+  outline: none;
+  border: none;
 }

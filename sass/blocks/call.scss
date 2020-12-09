@@ -1,0 +1,16 @@
+.call-bg{
+    background-color: #415B6B;
+    padding: 45px;
+    div input{
+        margin-top: 15px;
+    }
+    div button{
+        margin-top: 40px;
+    }
+}
+
+@media(min-width:768px){
+    .cal-bg{
+        padding: 60px;
+    }
+}

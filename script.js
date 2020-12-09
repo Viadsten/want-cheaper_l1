@@ -1,19 +1,23 @@
  var services = document.querySelector('#services');
  
-const mediaQuery750 = window.matchMedia('(min-width: 750px)')
-if (mediaQuery750.matches) {
+const mediaQuery950 = window.matchMedia('(min-width: 950px)')
+if (mediaQuery950.matches) {
   services.classList.remove('owl-carousel');
+  services.classList.remove('owl-carousel-1');
  }
  var cachedWidth = $(window).width();
  $(window).resize(function () {
    var newWidth = $(window).width();
    if (newWidth !== cachedWidth) {
      $(window).resize(function () {
-       if (document.documentElement.clientWidth > 750) {
+       if (document.documentElement.clientWidth > 950) {
         services.classList.remove('owl-carousel');
+        services.classList.remove('owl-carousel-1');
        }
-       if (document.documentElement.clientWidth < 750) {
+       if (document.documentElement.clientWidth < 950) {
         services.classList.add('owl-carousel');
+        services.classList.add('owl-carousel-1');
+
        }
      });
  

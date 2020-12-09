@@ -1,6 +1,6 @@
 .advantages{
-    background-image: url('../img/adv-bg.jpg');
-    background-repeat: no-repeat;
+    //background-image: url('../img/adv-bg.jpg');
+   // background-repeat: no-repeat;
 }
 
 .adventages__wrp{
@@ -111,8 +111,25 @@
         margin-top: -62px;
         //padding: 20px 0;
     }
+    .adv-bg-wrp{
+        height: 660px;
+        margin-bottom: 100px;
+    }
 }
 @media(min-width:1230px){
 
     
+}
+
+.adv-bg-wrp{
+    background-image: url("../img/adv-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+@media(min-width: 1330px){
+    
+    .advantages{
+    }
 }

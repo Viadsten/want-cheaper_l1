@@ -12,29 +12,28 @@ $(document).ready(function(){
   let movePosition = slidesToScroll * (itemWidth);
 
 
+  var cachedWidth = $(window).width();
+  $(window).resize(function () {
+    var newWidth = $(window).width();
+    if (newWidth !== cachedWidth) {
+      $(window).resize(function () {
+        if (document.documentElement.clientWidth > 750) {
+        }
+        if (document.documentElement.clientWidth < 750) {
+        }
+      });
+      widthf();
+      $(window).resize(function () {widthf()});
+      cachedWidth = newWidth;
+    }
+  });
 
-const mediaQuery650 = window.matchMedia('(min-width: 650px)')
-if (mediaQuery650.matches) {
-  slidesToShow = 2;
-  NewsResize();
-}
-
-const mediaQuery950 = window.matchMedia('(min-width: 950px)')
-if (mediaQuery950.matches) {
-  slidesToShow = 3;
-  NewsResize();
-}
-const mediaQuery1200 = window.matchMedia('(min-width: 1200px)')
-if (mediaQuery1200.matches) {
-  slidesToShow = 4;
-  NewsResize();
-}
-
-function NewsResize()
-{
-  itemWidth = (container.width()) / slidesToShow;
-  movePosition = slidesToScroll * (itemWidth);
-};
+  function widthf(){
+    itemWidth = (container.width()) / slidesToShow;
+    movePosition = slidesToScroll * (itemWidth);
+  }
+  
+  widthf();
 
   item.each(function(index, item){
     $(item).css({
