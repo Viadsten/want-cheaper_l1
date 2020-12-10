@@ -1,57 +1,17 @@
 @import "blocks/news.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/header-body.scss";
-@import "blocks/services.scss";
-@import "blocks/advantages.scss";
-@import "blocks/call.scss";
-@import "blocks/footer.scss";
-@import "blocks/modal.scss";
-@import "blocks/breadcrumb.scss";
-@import "blocks/map.scss";
 
-
-/** Montserrat Light **/
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 300;
-  font-style: normal;
-  src: url("../fonts/webfonts/Montserrat-Light.woff2") format("woff2"),
-       url("../fonts/webfonts/Montserrat-Light.woff") format("woff");
-}
-/** Montserrat Medium **/
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-style: normal;
-  src: url("../fonts/webfonts/Montserrat-Medium.woff2") format("woff2"),
-       url("../fonts/webfonts/Montserrat-Medium.woff") format("woff");
-}
-/** Montserrat SemiBold **/
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-style: normal;
-  src: url("../fonts/webfonts/Montserrat-SemiBold.woff2") format("woff2"),
-       url("../fonts/webfonts/Montserrat-SemiBold.woff") format("woff");
-}
-/** Montserrat Bold **/
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/webfonts/Montserrat-Bold.woff2") format("woff2"),
-       url("../fonts/webfonts/Montserrat-Bold.woff") format("woff");
-}
+@import "blocks/1-2-blocks.scss";
+@import "blocks/3-4-blocks.scss";
 
 *{
   margin: 0;
   padding: 0;
   //box-sizing: border-box;
-  font-family: "Montserrat" !important;
+  font-family: "Roboto" !important;
 }
 
 body {
-  font-family: "Montserrat" !important;
+  font-family: "Roboto" !important;
 }
 input{
   -webkit-tap-highlight-color:transparent;
@@ -114,27 +74,3 @@ button{
   }
 }
 
-.hover__link{
-  &:after {
-      pointer-events: none; // чтоб не мешался
-      opacity: 0;
-      transition: ease opacity 0.3s;
-      transition-delay: .0s; // при убирании курсора анимация сразу сработает
-    }
-  
-    &:hover {
-      &:after {
-        opacity: 1;
-      }
-    }
-}
-.hover__link::after{
-  transition: .2s;
-  opacity: 0;
-  margin-bottom: -3px;
-  content: "";
-  display: block;
-  height: 3px;
-  width: inherit;
-  background: linear-gradient(92.2deg, #95A3BF 25.37%, #5D7CA6 67.28%);
-}

@@ -12,28 +12,24 @@ $(document).ready(function(){
   let movePosition = slidesToScroll * (itemWidth);
 
 
-  var cachedWidth = $(window).width();
-  $(window).resize(function () {
-    var newWidth = $(window).width();
-    if (newWidth !== cachedWidth) {
-      $(window).resize(function () {
-        if (document.documentElement.clientWidth > 750) {
-        }
-        if (document.documentElement.clientWidth < 750) {
-        }
-      });
-      widthf();
-      $(window).resize(function () {widthf()});
-      cachedWidth = newWidth;
-    }
-  });
 
-  function widthf(){
-    itemWidth = (container.width()) / slidesToShow;
-    movePosition = slidesToScroll * (itemWidth);
-  }
-  
-  widthf();
+const mediaQuery650 = window.matchMedia('(min-width: 650px)')
+if (mediaQuery650.matches) {
+  slidesToShow = 2;
+  NewsResize();
+}
+
+const mediaQuery1050 = window.matchMedia('(min-width: 1050px)')
+if (mediaQuery1050.matches) {
+  slidesToShow = 3;
+  NewsResize();
+}
+
+function NewsResize()
+{
+  itemWidth = (container.width()) / slidesToShow;
+  movePosition = slidesToScroll * (itemWidth);
+};
 
   item.each(function(index, item){
     $(item).css({
@@ -68,5 +64,74 @@ $(document).ready(function(){
       position <= -(itemsCount - slidesToShow) * itemWidth
     )
   }
-  checkBtns();
+
+});
+
+$(document).ready(function(){
+  let position1 = 0;
+  let slidesToShow1 = 1;
+  const slidesToScroll1 = 1;
+  const container1 = $('.slider-container1');
+  const track1 = $('.slider-track1');
+  const item1 = $('.slider-item1');
+  const btnPrev1 = $('.btn-prev1');
+  const btnNext1 = $('.btn-next1');
+  const itemsCount1 = item1.length;
+  let itemWidth1 = (container1.width()) / slidesToShow1;
+  let movePosition1 = slidesToScroll1 * (itemWidth1);
+
+
+
+const mediaQuery6501 = window.matchMedia('(min-width: 650px)')
+if (mediaQuery6501.matches) {
+  slidesToShow1 = 3;
+  NewsResize1();
+}
+
+const mediaQuery10501 = window.matchMedia('(min-width: 1050px)')
+if (mediaQuery10501.matches) {
+  slidesToShow1 = 4;
+  NewsResize1();
+}
+
+function NewsResize1()
+{
+  itemWidth1 = (container1.width()) / slidesToShow1
+  movePosition1 = slidesToScroll1 * (itemWidth1);
+};
+
+  item1.each(function(index, item){
+    $(item).css({
+        minWidth: itemWidth1,
+    });
+  });
+
+  btnPrev1.click(function(){
+    const itemsLeft = Math.abs(position1) / itemWidth1;
+
+    position1 += itemsLeft >= slidesToScroll1 ? movePosition1 : itemsLeft * itemWidth1;
+    setPosition1();
+    checkBtns1();
+  });
+  btnNext1.click(function(){
+    const itemsLeft = itemsCount1 - (Math.abs(position1) + slidesToShow1 * itemWidth1)  / itemWidth1;
+    position1 -= itemsLeft >= slidesToScroll1 ? movePosition1 : itemsLeft * itemWidth1;
+    setPosition1();
+    checkBtns1();
+  });
+
+  const setPosition1 = () => {
+    track1.css({
+      transform: `translateX(${position1}px)`
+    });
+  };
+
+  const checkBtns1 = () => {
+    btnPrev1.prop('disabled', position1 === 0);
+    btnNext1.prop(
+      'disabled',
+      position1 <= -(itemsCount1 - slidesToShow1) * itemWidth1
+    )
+  }
+
 });
