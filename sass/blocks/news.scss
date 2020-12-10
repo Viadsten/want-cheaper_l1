@@ -24,7 +24,7 @@
 .card-body{
   background-color: #fff;
   overflow-y: auto;
-  height: 690px;
+  height: calc(95vh - 210px);
   h3::after{
     content: "";
     color: #fff;
@@ -213,7 +213,7 @@ line-height: 60px;
 }
 
 .news__card1{
-  margin: 20px;
+  margin: 7px;
   header{
     position: relative;
     width: 100%;
@@ -241,7 +241,7 @@ line-height: 60px;
     }
   }
    transition: ease-in-out 0.3s;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.25);
 }
 
 .slider-buttons{
