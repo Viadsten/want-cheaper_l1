@@ -440,6 +440,9 @@
     font-size: 40px;
     line-height: 50px; } }
 
+.news-bg-wrp {
+  background-position: top center; }
+
 .text-wrp-ind2 {
   max-width: 1080px;
   margin: 0 auto;
