@@ -440,6 +440,13 @@
     font-size: 40px;
     line-height: 50px; } }
 
+.text-wrp-ind2 {
+  max-width: 1080px;
+  margin: 0 auto;
+  color: #fff; }
+  .text-wrp-ind2 p .br-top {
+    margin-top: 20px; }
+
 * {
   margin: 0;
   padding: 0;
